@@ -58,6 +58,33 @@ graph TD
 ```
 
 ---
+## 📸 Demo Screenshots
+
+The following screenshots showcase the main user interfaces and role-based access features of EduSaathi.
+
+### 🔐 Role-Based Login
+
+The login page provides secure role-based authentication for Students, Parents, Teachers, and Principals. Each user is redirected to a personalized dashboard according to their authorized role.
+
+![EduSaathi Role-Based Login](./screenshots/login.png)
+
+---
+
+### 🎓 Student Dashboard
+
+The Student Dashboard provides students with a personalized view of their academic information, attendance, activities, and AI-powered academic assistance.
+
+![EduSaathi Student Dashboard](./screenshots/student-dashboard.png)
+
+---
+
+### 👨‍👩‍👦 Parent Dashboard
+
+The Parent Dashboard allows parents to monitor their child's academic progress, attendance, and other important school-related information through a dedicated interface.
+
+![EduSaathi Parent Dashboard](./screenshots/parent-dashboard.png)
+
+---
 
 ##  Tech Stack
 
