@@ -5,29 +5,33 @@
 
 ---
 
-## 🌟 Overview
+## Demo Link
+
+---
+
+## Overview
 
 **EduSaathi** is an intelligent, multi-persona AI School Operating System designed to bridge the communication and workflow gap between students, parents, teachers, and school leadership. Unlike superficial chatbots that offer pre-scripted canned answers or hallucinate administrative changes, EduSaathi employs a **deterministic application-level authorization matrix**, **orchestrated tool-calling agent architecture**, **conversational context memory**, **multilingual Indian language support (11 languages)**, **voice interaction**, and a **persona-aware AI avatar**.
 
 ---
 
-## 🎯 Key Capabilities
+##  Key Capabilities
 
 - **4 Context-Aware Personas**:
-  - 🎓 **Student Persona** (*EduSaathi Academic Assistant*): Friendly, student-focused, personal academic queries & attendance.
-  - 👨‍👩‍👧 **Parent Persona** (*EduSaathi Parent Support Assistant*): Caring, reassuring, tracks authorized child's progress, teacher call requests.
-  - 👩‍🏫 **Teacher Persona** (*EduSaathi Teaching Assistant*): Professional, attendance marking with verification, classroom summaries.
-  - 🏫 **Principal Persona** (*EduSaathi Management Assistant*): Executive, school-wide analytics, metrics, management actions.
-- **🛡️ Strict Application-Level Authorization**: Direct `authorize_action(user, action, resource)` checks prior to tool execution—the LLM is never trusted to make authorization decisions or execute arbitrary database operations.
-- **🔄 Verified Action Execution**: AI never claims an action succeeded unless mock domain services return verified confirmation (`success: true`).
-- **🌐 11 Indian Languages**: English, Hindi (हिंदी), Tamil (தமிழ்), Telugu (తెలుగు), Marathi (मराठी), Bengali (বাংলা), Gujarati (ગુજરાતી), Punjabi (ਪੰਜਾਬੀ), Kannada (ಕನ್ನಡ), Malayalam (മലയാളം), and Urdu (اردو).
-- **🎙️ Voice Interaction**: Speech-to-text input with persona-driven text-to-speech feedback.
-- **👤 Persona-Aware AI Avatar**: Visual talking avatar with listening, thinking, and speaking state feedback.
-- **📊 Modern Purple-First SaaS UI**: Purpose-built school operations dashboard and AI assistant workspace.
+  -  **Student Persona** (*EduSaathi Academic Assistant*): Friendly, student-focused, personal academic queries & attendance.
+  -  **Parent Persona** (*EduSaathi Parent Support Assistant*): Caring, reassuring, tracks authorized child's progress, teacher call requests.
+  -  **Teacher Persona** (*EduSaathi Teaching Assistant*): Professional, attendance marking with verification, classroom summaries.
+  -  **Principal Persona** (*EduSaathi Management Assistant*): Executive, school-wide analytics, metrics, management actions.
+- **Strict Application-Level Authorization**: Direct `authorize_action(user, action, resource)` checks prior to tool execution—the LLM is never trusted to make authorization decisions or execute arbitrary database operations.
+- ** Verified Action Execution**: AI never claims an action succeeded unless mock domain services return verified confirmation (`success: true`).
+- ** 11 Indian Languages**: English, Hindi (हिंदी), Tamil (தமிழ்), Telugu (తెలుగు), Marathi (मराठी), Bengali (বাংলা), Gujarati (ગુજરાતી), Punjabi (ਪੰਜਾਬੀ), Kannada (ಕನ್ನಡ), Malayalam (മലയാളം), and Urdu (اردو).
+- ** Voice Interaction**: Speech-to-text input with persona-driven text-to-speech feedback.
+- ** Persona-Aware AI Avatar**: Visual talking avatar with listening, thinking, and speaking state feedback.
+- ** Modern Purple-First SaaS UI**: Purpose-built school operations dashboard and AI assistant workspace.
 
 ---
 
-## 🏛️ System Architecture
+##  System Architecture
 
 ```mermaid
 graph TD
@@ -54,8 +58,35 @@ graph TD
 ```
 
 ---
+## 📸 Demo Screenshots
 
-## 🛠️ Tech Stack
+The following screenshots showcase the main user interfaces and role-based access features of EduSaathi.
+
+### 🔐 Role-Based Login
+
+The login page provides secure role-based authentication for Students, Parents, Teachers, and Principals. Each user is redirected to a personalized dashboard according to their authorized role.
+
+![EduSaathi Role-Based Login](./screenshots/login.png)
+
+---
+
+### 🎓 Student Dashboard
+
+The Student Dashboard provides students with a personalized view of their academic information, attendance, activities, and AI-powered academic assistance.
+
+![EduSaathi Student Dashboard](./screenshots/student-dashboard.png)
+
+---
+
+### 👨‍👩‍👦 Parent Dashboard
+
+The Parent Dashboard allows parents to monitor their child's academic progress, attendance, and other important school-related information through a dedicated interface.
+
+![EduSaathi Parent Dashboard](./screenshots/parent-dashboard.png)
+
+---
+
+##  Tech Stack
 
 - **Frontend**: React 18 / 19, Vite, Tailwind CSS (Purple-first design system), Lucide Icons.
 - **Backend**: Python 3.11+, FastAPI, Pydantic v2, Uvicorn.
@@ -64,7 +95,7 @@ graph TD
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 - **Node.js**: v18+ and npm
@@ -158,7 +189,7 @@ EduSaathi uses **SQLite** (`backend/edusaathi.db`) with **SQLAlchemy** — zero 
 
 ---
 
-## 🔐 Demo Accounts
+##  Demo Accounts
 
 Seeded automatically — use these to log in and test each role and the RBAC boundaries between them:
 
@@ -173,7 +204,7 @@ A second parent (`meera.deshmukh@edusaathi.demo` / `parent123`) and second stude
 
 ---
 
-## 🧠 AI / LLM Architecture
+##  AI / LLM Architecture
 
 EduSaathi never lets the LLM touch the database directly. The flow is:
 
@@ -207,7 +238,7 @@ Gemini composes the final natural-language reply, in the selected language
 
 ---
 
-## 🎙️ Voice & Avatar Pipeline
+##  Voice & Avatar Pipeline
 
 Voice uses the browser's built-in **Web Speech API** — no paid service, no extra setup:
 
@@ -222,13 +253,13 @@ Browser support: Chrome, Edge, and Safari support the Web Speech API; Firefox do
 
 ---
 
-## 📦 Repository Structure
+##  Repository Structure
 
 This ships as a single unified app (`backend/` + `frontend/`) with role-based routing (`student`/`parent`/`teacher`/`principal` views inside one React app and one FastAPI service), rather than five separate repos, as a deliberate scoping decision given the assessment timeline. This is architecturally equivalent — role isolation is enforced at the authorization layer regardless of how the frontend is split into repos — and would split cleanly into the assessment's suggested 5-repo layout (`student-portal`, `parent-portal`, `management-portal`, `staff-portal`, `xyz-ai`) if needed, since the frontend components are already organized by feature (`components/attendance`, `components/academics`, etc.) and the AI logic is already isolated in `backend/app/services/` + `backend/app/tools/`.
 
 ---
 
-## ✅ Known Limitations / Future Work
+##  Known Limitations / Future Work
 
 - Full native-language AI replies for all 11 languages require a live Gemini connection (see Language Coverage above) — the offline fallback covers 4.
 - The AI avatar is a stylized animated SVG rather than a photorealistic lip-synced avatar (e.g. D-ID/HeyGen) — a deliberate scoping choice given the timeline; the state machine (idle/listening/thinking/speaking/error) is fully real and driven by the actual request lifecycle.
@@ -237,7 +268,7 @@ This ships as a single unified app (`backend/` + `frontend/`) with role-based ro
 
 ---
 
-## 🧪 Running Tests
+##  Running Tests
 
 ```bash
 cd backend
@@ -254,7 +285,7 @@ Verifies the production build compiles cleanly.
 
 ---
 
-## 🚢 Deployment
+##  Deployment
 
 This repo is structured for local verification first. Once you've confirmed everything works locally:
 - **Backend**: any Python host that supports FastAPI/Uvicorn (Render, Railway, Fly.io, etc.) — set the same environment variables from `backend/.env` in the host's secret/env config, never in code.
