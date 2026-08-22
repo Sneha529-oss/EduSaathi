@@ -77,7 +77,7 @@ The login page provides secure role-based authentication for Students, Parents, 
 
 The Student Dashboard provides students with a personalized view of their academic information, attendance, activities, and AI-powered academic assistance.
 
-![EduSaathi Student Dashboard](./screenshots/student-dashboard.png)
+![EduSaathi Student Dashboard](./screenshots/student-dashboard.jfif)
 
 ---
 
@@ -85,7 +85,7 @@ The Student Dashboard provides students with a personalized view of their academ
 
 The Parent Dashboard allows parents to monitor their child's academic progress, attendance, and other important school-related information through a dedicated interface.
 
-![EduSaathi Parent Dashboard](./screenshots/parent-dashboard.png)
+![EduSaathi Parent Dashboard](./screenshots/parent-dashboard.jfif)
 
 ---
 
