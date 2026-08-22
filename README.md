@@ -27,11 +27,10 @@ Experience the EduSaathi platform with role-based dashboards for Students, Paren
   -  **Teacher Persona** (*EduSaathi Teaching Assistant*): Professional, attendance marking with verification, classroom summaries.
   -  **Principal Persona** (*EduSaathi Management Assistant*): Executive, school-wide analytics, metrics, management actions.
 - **Strict Application-Level Authorization**: Direct `authorize_action(user, action, resource)` checks prior to tool execution—the LLM is never trusted to make authorization decisions or execute arbitrary database operations.
-- ** Verified Action Execution**: AI never claims an action succeeded unless mock domain services return verified confirmation (`success: true`).
-- ** 11 Indian Languages**: English, Hindi (हिंदी), Tamil (தமிழ்), Telugu (తెలుగు), Marathi (मराठी), Bengali (বাংলা), Gujarati (ગુજરાતી), Punjabi (ਪੰਜਾਬੀ), Kannada (ಕನ್ನಡ), Malayalam (മലയാളം), and Urdu (اردو).
-- ** Voice Interaction**: Speech-to-text input with persona-driven text-to-speech feedback.
-- ** Persona-Aware AI Avatar**: Visual talking avatar with listening, thinking, and speaking state feedback.
-- ** Modern Purple-First SaaS UI**: Purpose-built school operations dashboard and AI assistant workspace.
+- **Verified Action Execution**: AI never claims an action succeeded unless mock domain services return verified confirmation (`success: true`).
+- **11 Indian Languages**: Supports **English, Hindi, Tamil, Telugu, Marathi, Bengali, Gujarati, Punjabi, Kannada, Malayalam, and Urdu**.
+- **Voice + AI Avatar** — Interactive **voice input, text-to-speech, and persona-aware avatar** with real-time interaction states.
+- **Modern School Dashboard** — Clean, **purple-first UI** designed for an intuitive school management experience.
 
 ---
 
