@@ -69,7 +69,7 @@ The following screenshots showcase the main user interfaces and role-based acces
 
 The login page provides secure role-based authentication for Students, Parents, Teachers, and Principals. Each user is redirected to a personalized dashboard according to their authorized role.
 
-![EduSaathi Role-Based Login](./screenshots/login.png)
+![EduSaathi Role-Based Login](./screenshots/login.jfif)
 
 ---
 
