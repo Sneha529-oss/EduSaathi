@@ -7,7 +7,7 @@
 
 ## View Live Demo (LINK) :
 
-👉 **[Launch EduSaathi – Live Demo](https://edusaathi-frontend-l3hi.onrender.com/)**
+👉 **[[Launch EduSaathi – Live ](https://edusaathi-frontend-l3hi.onrender.com/)](https://edusaathi-frontend-l3hi.onrender.com/)**
 
 Experience the EduSaathi platform with role-based dashboards for Students, Parents, Teachers, and Principals.
 
